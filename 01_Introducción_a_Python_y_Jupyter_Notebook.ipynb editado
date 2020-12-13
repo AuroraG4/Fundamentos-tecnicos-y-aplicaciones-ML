@@ -1,0 +1,1744 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8.2"
+    },
+    "colab": {
+      "name": "01 Introducción a Python y Jupyter Notebook.ipynb",
+      "provenance": [],
+      "toc_visible": true,
+      "include_colab_link": true
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AuroraG4/Fundamentos-tecnicos-y-aplicaciones-ML/blob/main/01_Introducci%C3%B3n_a_Python_y_Jupyter_Notebook.ipynb%20editado\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vFiey9hmImuW"
+      },
+      "source": [
+        "## Jupyter Notebook\n",
+        "\n",
+        "__Jupyter Notebook__, es un ambiente de trabajo que busca unificar las herramientas de documentación y ejecución, permitiendo escribir código, visualizar resultados  e incluir comentarios de manera interactiva. \n",
+        "\n",
+        "Otra ventaja es que permite su exportación  a archivos html, pdf, markdown, entre otros \n",
+        "\n",
+        "Su nombre proviene de los lenguajes de programación que soporta: Julia, Python y R\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aanzUumhImuW"
+      },
+      "source": [
+        "Puedes correr una línea de código oprimiendo el botón Run del menú o bien con la combinación de teclas Ctrl+Enter o Shift+Enter"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "shIBklEovQo0"
+      },
+      "source": [
+        "### Hola mundo"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3ppRXOBg6ra0"
+      },
+      "source": [
+        "#Hola"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "po5_m5mi6uWs"
+      },
+      "source": [
+        "##Hola"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AwIg1XK56z2Y"
+      },
+      "source": [
+        "###Hola"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bhPdzeq663Xq"
+      },
+      "source": [
+        "####Hola"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7Qr-fTSV65HY"
+      },
+      "source": [
+        "Hola"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "dNp1BiJ4ImuW"
+      },
+      "source": [
+        "print(\"Hola Mundo\")"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "q-tf-RmXImuW"
+      },
+      "source": [
+        "\n",
+        "__Fácil acceso a la documentación__\n",
+        "* ?          Introducción y vistazo a Jupyter Notebook (IPython)\n",
+        "* help()     Documentación de alguna librería, modulo, objeto\n",
+        "* object?    Detalles acerca de un objeto, usar objeto?? para más detalles"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fkOCnIl5ImuW"
+      },
+      "source": [
+        "## Variables en Python\n",
+        "\n",
+        "Los nombres pueden contener los cualquier letra de la __A__ a la __Z__, en mayúsculas o minúsculas, números del __0__ al __9__ y algunos caracteres especiales como _____ o __-__.\n",
+        "\n",
+        "Hay además 33 palabras clave que Python tiene reservadas y que no pueden ser usados como nombres de variables\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T0qm9FHPzQ3e",
+        "outputId": "532c7a07-ea55-4138-bba4-07159e0678bc"
+      },
+      "source": [
+        "import keyword\n",
+        "keyword.kwlist"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['False',\n",
+              " 'None',\n",
+              " 'True',\n",
+              " 'and',\n",
+              " 'as',\n",
+              " 'assert',\n",
+              " 'break',\n",
+              " 'class',\n",
+              " 'continue',\n",
+              " 'def',\n",
+              " 'del',\n",
+              " 'elif',\n",
+              " 'else',\n",
+              " 'except',\n",
+              " 'finally',\n",
+              " 'for',\n",
+              " 'from',\n",
+              " 'global',\n",
+              " 'if',\n",
+              " 'import',\n",
+              " 'in',\n",
+              " 'is',\n",
+              " 'lambda',\n",
+              " 'nonlocal',\n",
+              " 'not',\n",
+              " 'or',\n",
+              " 'pass',\n",
+              " 'raise',\n",
+              " 'return',\n",
+              " 'try',\n",
+              " 'while',\n",
+              " 'with',\n",
+              " 'yield']"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ABAIsTCy0IPE",
+        "outputId": "2e0c6aae-5fca-4d97-cd72-008581682928"
+      },
+      "source": [
+        "len(keyword.kwlist)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "33"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5FL-KzXRImuW"
+      },
+      "source": [
+        "## Tipos fundamentales de variables\n",
+        "\n",
+        "* int:     enteros   (1, 2, 3 ...)\n",
+        "* float:   flotantes (1.0, 1.567, ...)\n",
+        "* bool:    boleanos  (True, False)\n",
+        "* complex: complejos\n",
+        "\n",
+        "El operador para asignar variables es el signo __=__"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "WsthBTaTImuW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f70608e9-b9c7-4400-94b8-7b501cda1adf"
+      },
+      "source": [
+        "# enteros\n",
+        "x = 1 \n",
+        "type(x)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "piGm8UanImuW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "178c56b8-c2fc-49de-f1f7-bd8ac7e14089"
+      },
+      "source": [
+        "### Conversión de Tipo\n",
+        "x = float(x)\n",
+        "print(x, type(x))"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1.0 <class 'float'>\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "39bjMxpj9Gbg",
+        "outputId": "2f812226-3926-4449-a29e-e55b27b35787"
+      },
+      "source": [
+        "y = 2\n",
+        "type(y)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B0Ntcpae9M3z",
+        "outputId": "fb4a238b-88fc-4e2c-9de1-cd884ff084f9"
+      },
+      "source": [
+        "y = float(y)\n",
+        "print (y)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "2.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "p-P10wLiImuX"
+      },
+      "source": [
+        "## Operadores\n",
+        "\n",
+        "\n",
+        "* __Aritméticos:__       +  suma, -  resta, *  multiplicación, /  división, ** potencia, // división entera\n",
+        "\n",
+        "* __Boleanos:__          and, or, not\n",
+        "\n",
+        "* __De comparación:__    <   menor que, >   mayor que, <=  menor o igual que, >=  mayor o igual que, ==  igual que, !=  no es igual que\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nVSnJwwtImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "23f7b1e9-31b8-434d-a1c2-8549c97a2004"
+      },
+      "source": [
+        "1 + 2, 1 - 2, 1 * 3, 1 / 2, 2//3, 2**2"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(3, -1, 3, 0.5, 0, 4)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aFJqDT6AImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "64139001-ee52-45c4-9a60-37de3940eda6"
+      },
+      "source": [
+        "True and False, not False, True or False"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(False, True, True)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y6WcU4KB9_zb",
+        "outputId": "8630084f-0a9a-4adf-98ae-7dc9ce565a10"
+      },
+      "source": [
+        "True and False, False and False, False and True"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(False, False, False)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2RV8XbJEImuX"
+      },
+      "source": [
+        "3<2, 3>3, 3<=3, 3>=3, 4==4  "
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_t5KjXuvImuX"
+      },
+      "source": [
+        "## Cadenas (str)\n",
+        "El procesamiento de textos en Python es muy poderos. Veamos algunos ejemplos"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yXxsfnSfImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "81368528-4e2f-4ef0-e251-efe48327fa7d"
+      },
+      "source": [
+        "s='Hola mundo'\n",
+        "type(s)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hZ5z2sRsEr0t",
+        "outputId": "9beeacb4-adf0-4031-eb00-25ff49f36881"
+      },
+      "source": [
+        "s= \"Test para hacer cosas\"\n",
+        "type(s)"
+      ],
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 27
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "n68rJI8QE94h"
+      },
+      "source": [
+        "s?"
+      ],
+      "execution_count": 17,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "itkSPxUrFOLm"
+      },
+      "source": [
+        "keyword?"
+      ],
+      "execution_count": 20,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0cj-trlFFn9v",
+        "outputId": "82f009fb-8638-4820-f112-f6d6e9c12510"
+      },
+      "source": [
+        "help(keyword)"
+      ],
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Help on module keyword:\n",
+            "\n",
+            "NAME\n",
+            "    keyword - Keywords (from \"graminit.c\")\n",
+            "\n",
+            "MODULE REFERENCE\n",
+            "    https://docs.python.org/3.6/library/keyword\n",
+            "    \n",
+            "    The following documentation is automatically generated from the Python\n",
+            "    source files.  It may be incomplete, incorrect or include features that\n",
+            "    are considered implementation detail and may vary between Python\n",
+            "    implementations.  When in doubt, consult the module reference at the\n",
+            "    location listed above.\n",
+            "\n",
+            "DESCRIPTION\n",
+            "    This file is automatically generated; please don't muck it up!\n",
+            "    \n",
+            "    To update the symbols in this file, 'cd' to the top directory of\n",
+            "    the python source tree after building the interpreter and run:\n",
+            "    \n",
+            "        ./python Lib/keyword.py\n",
+            "\n",
+            "FUNCTIONS\n",
+            "    iskeyword = __contains__(...) method of builtins.frozenset instance\n",
+            "        x.__contains__(y) <==> y in x.\n",
+            "\n",
+            "DATA\n",
+            "    __all__ = ['iskeyword', 'kwlist']\n",
+            "    kwlist = ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'cl...\n",
+            "\n",
+            "FILE\n",
+            "    /usr/lib/python3.6/keyword.py\n",
+            "\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "cjgTTu0cFWfa"
+      },
+      "source": [
+        "print?"
+      ],
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "l-r6L4LbImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "03fd8a33-ee3d-45b1-9b07-da1ec630e78c"
+      },
+      "source": [
+        "print(len(s))\n",
+        "print(s.upper())\n",
+        "print(s.replace('Test','Hola'))"
+      ],
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "21\n",
+            "TEST PARA HACER COSAS\n",
+            "Hola para hacer cosas\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bwbYrtbeImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02c9544d-ca7f-43c3-a5e7-be477740e624"
+      },
+      "source": [
+        "s[0], s[1], s[2], s[3]"
+      ],
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "('T', 'e', 's', 't')"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "84KzIY0wImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "a5218b8b-f03e-4792-9c9e-1da5f3b93a7d"
+      },
+      "source": [
+        "s[0:5]"
+      ],
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Test '"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "AgakmSuqImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "f8bcef3c-8ec3-4e68-fe5c-d4e3ff6da423"
+      },
+      "source": [
+        "s[:5]"
+      ],
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Test '"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "49j8PDcQImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "ded0afa9-a159-441b-809b-0e85ed3808d6"
+      },
+      "source": [
+        "s[-3:]"
+      ],
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'sas'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 32
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Vpn49ln9ImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "0d1df3e4-a551-4943-d60a-5d2224612104"
+      },
+      "source": [
+        "s[:]"
+      ],
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Test para hacer cosas'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 33
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RebFS1ijImuX"
+      },
+      "source": [
+        "## Listas\n",
+        "Las listas son muy similares alas cadenas excepto que cada elemento puede ser de un tipo diferente.\n",
+        "\n",
+        "La sintaxis para crear listas en Python es [ ..., ..., ...]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bBjlp4bpImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5203c1b1-fa43-44fb-b2ab-0a413036e854"
+      },
+      "source": [
+        "l = [ 1, 'hola', 3.4, 'sapo']\n",
+        "type(l)"
+      ],
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 48
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ZM4cE4_7ImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b3aa691c-d450-4259-e9fe-899fb0bebfbb"
+      },
+      "source": [
+        "print(l)\n",
+        "print(l[1])\n",
+        "print(l[-2])\n",
+        "print(l[1:4])"
+      ],
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[1, 'hola', 3.4, 'sapo']\n",
+            "hola\n",
+            "3.4\n",
+            "['hola', 3.4, 'sapo']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "g_UaBVNyImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d710294a-a81c-4b7c-c948-ac008e767372"
+      },
+      "source": [
+        "lista_anidada = [1, [2, [3, [4, [5]]]]]\n",
+        "\n",
+        "lista_anidada"
+      ],
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, [2, [3, [4, [5]]]]]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yvWfSSj_-KTD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02d97994-a968-4ce9-b2c9-d73ecc865212"
+      },
+      "source": [
+        "l2= range(5,20)\n",
+        "l2"
+      ],
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "range(5, 20)"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 55
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tGIOGnGl-Rb1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8f21a87b-c0b5-48c1-de8c-4a2b5704f563"
+      },
+      "source": [
+        "for x in l2:\n",
+        "  print(x)"
+      ],
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "16\n",
+            "17\n",
+            "18\n",
+            "19\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Lzc8CYjEImuX"
+      },
+      "source": [
+        "Las listas juegan un rol muy importante en Python y son, por ejemplo, usadas en bucles y otras estructuras de control de flujo"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "v2rKsAR6ImuX"
+      },
+      "source": [
+        "### Agregando  y modificando elementos de listas"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_uZSCOaDIqOk"
+      },
+      "source": [
+        "# crea una nueva lista vacía\n",
+        "l = [] "
+      ],
+      "execution_count": 83,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sBD-uedeImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "72d7888d-60bf-4e75-8f48-c02879b8e392"
+      },
+      "source": [
+        "\n",
+        "# agrega un elemento a la lista, usando `append`\n",
+        "l.append(\"1\")\n",
+        "l.append(\"2\")\n",
+        "l.append(\"3\")\n",
+        "\n",
+        "print(l)"
+      ],
+      "execution_count": 84,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['1', '2', '3']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_U6k7j9SImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4e839dc7-bb0e-4149-8308-1ab10585736e"
+      },
+      "source": [
+        "# modifica un elemento de la lista\n",
+        "l[0]=5\n",
+        "l"
+      ],
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[5, '2', '3']"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 85
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "W0dxAopEImuX"
+      },
+      "source": [
+        "## Tuplas\n",
+        "\n",
+        "Tuplas son similares a las listas, excepto que ellas no pueden ser modificadas una vez creadas, es decir, son *inmutables*. \n",
+        "\n",
+        "En Python, las tuplas son creadas usando la sintaxis `(..., ..., ...)`, o incluso `..., ...`:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eNO_u_VrImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "543e04f1-2b25-472a-ea1d-a91439b26cbb"
+      },
+      "source": [
+        "punto = 10, 20\n",
+        "\n",
+        "print(punto, type(punto))"
+      ],
+      "execution_count": 88,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(10, 20) <class 'tuple'>\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JCGNM7q_J_U9",
+        "outputId": "2030d918-315b-4570-b864-d94380142f6b"
+      },
+      "source": [
+        "otro_punto = 20, 33\n",
+        "print(otro_punto)"
+      ],
+      "execution_count": 89,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(20, 33)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ubZufFOdImuX"
+      },
+      "source": [
+        "Podemos separar una tupla asignándola a una lista de variables separadas por coma:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LqQ1KulUImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "200d54f1-185d-4f99-b874-dc1115a9681a"
+      },
+      "source": [
+        "x, y = punto\n",
+        "\n",
+        "print(\"x =\", x)\n",
+        "print(\"y =\", y)"
+      ],
+      "execution_count": 90,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "x = 10\n",
+            "y = 20\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NpxuWAybKMUm",
+        "outputId": "c825fbe8-fff1-4e90-b5d6-970f00153a41"
+      },
+      "source": [
+        "x, y = otro_punto\n",
+        "print(y)"
+      ],
+      "execution_count": 93,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "33\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8aZeRnlT3_4Q"
+      },
+      "source": [
+        "## Diccionarios"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "98UYBMDc38EK",
+        "outputId": "c11b2117-fda0-4fc1-ad04-1563a2fc3b34"
+      },
+      "source": [
+        "miDiccionario = {\"A\": \"Árbol\", \"B\":\"Barro\", \"C\":\"Cielo\"}\n",
+        "miDiccionario"
+      ],
+      "execution_count": 94,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'A': 'Árbol', 'B': 'Barro', 'C': 'Cielo'}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 94
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "auBu8fvM4zWi",
+        "outputId": "4033601b-b4dc-4629-d0df-73e85d2b3681"
+      },
+      "source": [
+        "miDiccionario.keys()"
+      ],
+      "execution_count": 95,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_keys(['A', 'B', 'C'])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 95
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pQeisVFs47vh",
+        "outputId": "e75e4bf3-f022-48f4-aae2-3a1eaf98a4b6"
+      },
+      "source": [
+        "miDiccionario.values()"
+      ],
+      "execution_count": 96,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_values(['Árbol', 'Barro', 'Cielo'])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 96
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "XPMUb-QV4wJU",
+        "outputId": "69d74929-4782-4fd0-ef16-40dbf658a4c6"
+      },
+      "source": [
+        "miDiccionario[\"A\"]"
+      ],
+      "execution_count": 97,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            },
+            "text/plain": [
+              "'Árbol'"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 97
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1r1nU8Oj5AHy",
+        "outputId": "868bb9a5-911a-4ef3-ae5d-b53df1554b2b"
+      },
+      "source": [
+        "miDiccionario[\"D\"]=\"Dado\"\n",
+        "miDiccionario"
+      ],
+      "execution_count": 98,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'A': 'Árbol', 'B': 'Barro', 'C': 'Cielo', 'D': 'Dado'}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 98
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "P6eV57P-ImuX"
+      },
+      "source": [
+        "## Ciclos usando for"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8MYje81NImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "21e9bc10-182c-411a-c434-b1f3b04514a8"
+      },
+      "source": [
+        "for i in l:\n",
+        "    print(i) \n",
+        "    "
+      ],
+      "execution_count": 99,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5\n",
+            "2\n",
+            "3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4Yu6Xd5RKwYj"
+      },
+      "source": [
+        "l?"
+      ],
+      "execution_count": 101,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "mnS_p-LMImuX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a7053542-4584-4f1c-f3f2-ceae6adc3226"
+      },
+      "source": [
+        "for x in [1,2,3]:\n",
+        "    print(x)"
+      ],
+      "execution_count": 102,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GnU94ShUImuY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bd414159-18aa-418d-ca4c-1d71a9ef7465"
+      },
+      "source": [
+        "for n in range(4):\n",
+        "    print(n)"
+      ],
+      "execution_count": 103,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Qp-6Ef3tImuY"
+      },
+      "source": [
+        "## Funciones\n",
+        "\n",
+        "En Python una función es definida usando la palabra clave `def`, seguida de un nombre para la función, una variable entre paréntesis `()`, y el símbolo de dos puntos `:`. El siguiente código, con un nivel adicional de indentación, es el cuerpo de la función."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Ki_F5q5GImuY"
+      },
+      "source": [
+        "def cuadrado(x):\n",
+        "    \"\"\"\n",
+        "    Calcula el cuadrado de x.\n",
+        "    \"\"\"\n",
+        "    return x**2"
+      ],
+      "execution_count": 121,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4YzueWqnImuY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bd22092d-0f52-4a52-ac0f-64d128bb93a8"
+      },
+      "source": [
+        "z=3\n",
+        "cuadrado(z)"
+      ],
+      "execution_count": 107,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 107
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "kiiGMc-FLcDy"
+      },
+      "source": [
+        "def restar(o):\n",
+        "    \"\"\"\n",
+        "    Calcula o menos uno.\n",
+        "    \"\"\"\n",
+        "    return o-1\n"
+      ],
+      "execution_count": 143,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "klbEM9HoL5vi",
+        "outputId": "1d57ad1e-64ed-44fa-b4cf-39bd5fada722"
+      },
+      "source": [
+        "o=2\n",
+        "restar(o)"
+      ],
+      "execution_count": 144,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 144
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6wgiMvlXImuY"
+      },
+      "source": [
+        "## Funciones sin nombre (funciones lambda)\n",
+        "\n",
+        "En Python podemos también crear funciones sin nombre, usando la palabra clave `lambda`:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nSBnlnanImuY"
+      },
+      "source": [
+        "f1 = lambda x: x**2\n",
+        "f1(z)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MAy4-S6OImuY"
+      },
+      "source": [
+        "## Clases\n",
+        "\n",
+        "Las clases son una característica clave de la programación orientada al objeto. Una clase es una estructura para representar un objeto y las operaciones que pueden ser realizadas sobre el objeto. \n",
+        "\n",
+        "En Python una clase puede contener *atributos* (variables) y *métodos* (funciones)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SkBkEiYJuHuu"
+      },
+      "source": [
+        "import math"
+      ],
+      "execution_count": 145,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "JbeLyZ9Pu6JM"
+      },
+      "source": [
+        "math?"
+      ],
+      "execution_count": 146,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yOxyLJYjImuY"
+      },
+      "source": [
+        "## Módulos\n",
+        "\n",
+        "La mayoría de la funcionalidad en Python es provista por *módulos*. \n",
+        "\n",
+        "Para usar un módulo en un programa Python éste debe primero ser **importado**, para lo cual se usa el comando `import`. Por ejemplo, el módulo `math`, que contiene muchas funciones matemáticas estándar, para hacer uso de sus funciones tenemos que importarlo de la siguiente forma:"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "WoEKlAFXImuY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f2edb53a-3dbb-428e-c2ff-5c66331c13fd"
+      },
+      "source": [
+        "import math\n",
+        "\n",
+        "x = math.cos(2*math.pi)\n",
+        "\n",
+        "print(x)"
+      ],
+      "execution_count": 147,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "btzrGQh1PXsK",
+        "outputId": "da520101-7229-4fa8-d5cf-dd82d1f85172"
+      },
+      "source": [
+        "math.sin"
+      ],
+      "execution_count": 148,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<function math.sin>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 148
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5Xi9LW881QuE"
+      },
+      "source": [
+        "Otra forma que aveces veremos es la siguiente: "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "oLLQuVlEImuY"
+      },
+      "source": [
+        "import math as m  #bautizar el modulo con un nombre más corto\n",
+        "\n",
+        "x = m.cos(2*m.pi)\n",
+        "\n",
+        "print(x)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hjphoLiE0iAW"
+      },
+      "source": [
+        "from math import cos  #para importar una función específica de un módulo \n",
+        "x = cos(2*pi)\n",
+        "prin(x)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hnryGf8XImuY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "66f809d8-b434-4ac9-e7af-a6ad07f95e82"
+      },
+      "source": [
+        "from math import *  #para importar todas las funciones de un módulo\n",
+        "\n",
+        "y = sin(2*pi)\n",
+        "\n",
+        "print(y)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "-2.4492935982947064e-16\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
